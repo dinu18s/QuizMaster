@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Landing from './pages/Landing';
 import DifficultySelect from './pages/DifficultySelect';
 import TopicSelect from './pages/TopicSelect';
@@ -11,7 +11,7 @@ import NotFound from './pages/NotFound';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         {/* Landing Page */}
         <Route path="/" element={<Landing />} />
@@ -45,6 +45,6 @@ export default function App() {
         {/* 404 Fallback */}
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
